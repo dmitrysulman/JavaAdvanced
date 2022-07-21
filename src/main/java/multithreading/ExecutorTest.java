@@ -7,14 +7,21 @@ import java.util.concurrent.TimeUnit;
 
 public class ExecutorTest {
     public static void main(String[] args) throws InterruptedException {
-        ExecutorService executorService = Executors.newFixedThreadPool(2);
+        ExecutorService executorService = Executors.newFixedThreadPool(1);
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 1; i++) {
             executorService.execute(() -> {
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException e) {
-                    return;
+//                try {
+//                    Thread.sleep(1000);
+//                } catch (InterruptedException e) {
+//                    return;
+//                }
+                for (int j = 0; j < 1_000_000_000; j++) {
+                    if (Thread.currentThread().isInterrupted()) {
+                        System.out.println("BYE!");
+                        break;
+                    }
+                    Math.sin(j);
                 }
                 System.out.println("Work completed " + Thread.currentThread().getId());
             });
