@@ -16,7 +16,7 @@ public class ExecutorTest {
 //                } catch (InterruptedException e) {
 //                    return;
 //                }
-                for (int j = 0; j < 1_000_000_000; j++) {
+                for (int j = 0; j < 1; j++) {
                     if (Thread.currentThread().isInterrupted()) {
                         System.out.println("BYE!");
                         break;
