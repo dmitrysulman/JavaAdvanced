@@ -26,5 +26,16 @@ public class RegExp {
             System.out.print(matcher.group(1) + " ");
             System.out.println(matcher.group("last"));
         }
+
+        String text2 = """
+                kpb jwjd frv http://www.jqwmvnhu.gagzkxksp.ru/tmyp/?param0=ugtehajgg ior bsavmi
+                elsdedejy blfesitfag udhyluxkj http://www.zhbh.kdokw.yapv.ru/xoihdn/ubs/?param0=pblsq&param1=wwqzb tmzwwo dmvlbwyvqv http://www.mppsuderi.rqt.com/ermuske/mldbhgy/?param0=bex hvcsgbl jrhbx gjtesiyyej pvj skphrki http://www.eccqkeoj.uttajvapi.hxnadj.com/?param0=hoi&param1=ssdd yykjd lob zlrsrzi xmmjbvle
+                cpuymoqua http://www.zpy.witzxygk.ru hszud gzyvvhxqam crv zsy cuwjsruq https://www.ocdmnsdocx.xzsom.com nfwzfxllbe feesuhjemh zhhaigtoi https://www.osjum.sfzxcqblax.oqehtucjvd.com/?param0=sfcbfp&param1=sjnb""";
+        Pattern url = Pattern.compile("https?://\\S+");
+        Matcher matcher1 = url.matcher(text2);
+
+        while (matcher1.find()) {
+            System.out.println(matcher1.group());
+        }
     }
 }
