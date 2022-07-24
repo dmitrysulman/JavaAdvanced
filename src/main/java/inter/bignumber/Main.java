@@ -33,7 +33,10 @@ public class Main {
 
         System.out.println(n9.add(n10));
 
-        System.out.println(new MyBigNumber("-20504962648058829508634537240139148734").add(new MyBigNumber("469915985327887")));
+        System.out.println(new MyBigNumber("-20504962648058829508634537240139148734").add(new MyBigNumber("-469915985327887")));
+        System.out.println(new MyBigNumber("-20504962648058829508634537240139148734").sub(new MyBigNumber("-469915985327887")));
         System.out.println(new MyBigNumber("-38027450742057608221309764383410169802626").add(new MyBigNumber("-38027450742057608221309764383410169802626")));
+        System.out.println(new MyBigNumber("-38027450742057608221309764383410169802626").sub(new MyBigNumber("-38027450742057608221309764383410169802626")));
+
     }
 }
