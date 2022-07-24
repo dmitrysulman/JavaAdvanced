@@ -76,7 +76,6 @@ public class MyBigNumber implements BigNumber {
                 digit += 10;
                 add = -1;
             }
-//            System.out.println(digit);
             result.insert(0, digit);
         }
         return new MyBigNumber(result.toString());
@@ -112,7 +111,7 @@ public class MyBigNumber implements BigNumber {
 
     @Override
     public BigNumber sub(BigNumber bigNumber) {
-        return null;
+        return add(makeNegative(bigNumber));
     }
 
     @Override
