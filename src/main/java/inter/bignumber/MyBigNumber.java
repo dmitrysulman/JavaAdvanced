@@ -8,63 +8,62 @@ public class MyBigNumber implements BigNumber {
         this.number = number;
     }
 
-    public static boolean isPositive(BigNumber bigNumber) {
-        return !bigNumber.toString().startsWith("-");
+    public boolean isPositive() {
+        return !number.startsWith("-");
     }
 
-    public static BigNumber abs(BigNumber bigNumber) {
-        if (isPositive(bigNumber)) {
-            return bigNumber;
+    public BigNumber abs() {
+        if (isPositive()) {
+            return this;
         } else {
-            return new MyBigNumber(bigNumber.toString().substring(1));
+            return new MyBigNumber(number.substring(1));
         }
     }
 
-    private static int compareAbsWithSameLength(BigNumber bigNumber1, BigNumber bigNumber2) {
-        String n1 = bigNumber1.toString();
-        String n2 = bigNumber2.toString();
-        for (int i = 0; i < n1.length(); i++) {
-            if (Character.getNumericValue(n1.charAt(i)) > Character.getNumericValue(n2.charAt(i))) {
+    private int compareAbsWithSameLength(BigNumber bigNumber) {
+        String bigNumberString = bigNumber.toString();
+        for (int i = 0; i < number.length(); i++) {
+            if (Character.getNumericValue(number.charAt(i)) > Character.getNumericValue(bigNumberString.charAt(i))) {
                 return 1;
-            } else if (Character.getNumericValue(n1.charAt(i)) < Character.getNumericValue(n2.charAt(i))) {
+            } else if (Character.getNumericValue(number.charAt(i)) < Character.getNumericValue(bigNumberString.charAt(i))) {
                 return -1;
             }
         }
         return 0;
     }
 
-    public static BigNumber makeNegative(BigNumber bigNumber) {
-        if ("0".equals(bigNumber.toString())) {
-            return bigNumber;
-        } else if (isPositive(bigNumber)) {
-            return new MyBigNumber("-" + bigNumber);
+    public BigNumber makeNegative() {
+        if ("0".equals(number)) {
+            return this;
+        } else if (isPositive()) {
+            return new MyBigNumber("-" + number);
         } else {
-            return abs(bigNumber);
+            return abs();
         }
     }
 
-    private static BigNumber addNumbers(BigNumber bigNumber1, BigNumber bigNumber2) {
+    private BigNumber addNumbers(BigNumber bigNumber) {
         StringBuilder result = new StringBuilder();
-        boolean isNumber1Positive = isPositive(bigNumber1);
-        boolean isNumber2Positive = isPositive(bigNumber2);
+        boolean isNumber1Positive = isPositive();
+        boolean isNumber2Positive = bigNumber.isPositive();
 
         int number1Start = isNumber1Positive ? 0 : 1;
         int number2Start = isNumber2Positive ? 0 : 1;
         int number1Sign = isNumber1Positive ? 1 : -1;
         int number2Sign = isNumber2Positive ? 1 : -1;
-        int number1Position = bigNumber1.toString().length() - 1;
-        int number2Position = bigNumber2.toString().length() - 1;
+        int number1Position = number.length() - 1;
+        int number2Position = bigNumber.toString().length() - 1;
         int add = 0;
         while (number1Position >= number1Start || number2Position >= number2Start) {
             int digit1 = 0;
             int digit2 = 0;
 
             if (number1Position >= number1Start) {
-                digit1 = Character.getNumericValue(bigNumber1.toString().charAt(number1Position)) * number1Sign;
+                digit1 = Character.getNumericValue(number.charAt(number1Position)) * number1Sign;
                 number1Position--;
             }
             if (number2Position >= number2Start) {
-                digit2 = Character.getNumericValue(bigNumber2.toString().charAt(number2Position)) * number2Sign;
+                digit2 = Character.getNumericValue(bigNumber.toString().charAt(number2Position)) * number2Sign;
                 number2Position--;
             }
             int digit = digit1 + digit2 + add;
@@ -83,25 +82,25 @@ public class MyBigNumber implements BigNumber {
 
     @Override
     public BigNumber add(BigNumber bigNumber) {
-        boolean isThisNumberPositive = isPositive(this);
-        boolean isOtherNumberPositive = isPositive(bigNumber);
+        boolean isThisNumberPositive = isPositive();
+        boolean isOtherNumberPositive = bigNumber.isPositive();
 
         if (isThisNumberPositive && isOtherNumberPositive) {
             //оба положительные, складываем
-            return addNumbers(this, bigNumber);
+            return addNumbers(bigNumber);
         } else if (!isThisNumberPositive && !isOtherNumberPositive) {
             //оба отрицательные, складываем модули, добавляем минус
-            return makeNegative(addNumbers(abs(this), abs(bigNumber)));
+            return ((MyBigNumber) abs()).addNumbers(bigNumber.abs()).makeNegative();
         } else {
             //одно положительное, другое отрицательное, берем большее со знаком плюс, из большего вычитаем модуль меньшего, добавляем знак большего
-            BigNumber number1 = abs(this);
-            BigNumber number2 = abs(bigNumber);
+            MyBigNumber number1 = (MyBigNumber) abs();
+            MyBigNumber number2 = (MyBigNumber) bigNumber.abs();
             if (number1.compareTo(number2) > 0) {
-                BigNumber tmp = addNumbers(number1, makeNegative(number2));
-                return isThisNumberPositive ? tmp : makeNegative(tmp);
+                BigNumber tmp = number1.addNumbers(number2.makeNegative());
+                return isThisNumberPositive ? tmp : tmp.makeNegative();
             } else if (number1.compareTo(number2) < 0) {
-                BigNumber tmp = addNumbers(makeNegative(number1), number2);
-                return isOtherNumberPositive ? tmp : makeNegative(tmp);
+                BigNumber tmp = number2.addNumbers(number1.makeNegative());
+                return isOtherNumberPositive ? tmp : tmp.makeNegative();
             } else {
                 return new MyBigNumber("0");
             }
@@ -111,14 +110,14 @@ public class MyBigNumber implements BigNumber {
 
     @Override
     public BigNumber sub(BigNumber bigNumber) {
-        return add(makeNegative(bigNumber));
+        return add(bigNumber.makeNegative());
     }
 
     @Override
     public int compareTo(Object o) {
         MyBigNumber other = (MyBigNumber) o;
-        boolean isPositiveThis = isPositive(this);
-        boolean isPositiveOther = isPositive(other);
+        boolean isPositiveThis = isPositive();
+        boolean isPositiveOther = other.isPositive();
         boolean isLongerThis = number.length() > other.toString().length();
         boolean isLongerOther = number.length() < other.toString().length();
         if (number.equals(other.toString())) {
@@ -132,7 +131,7 @@ public class MyBigNumber implements BigNumber {
         } else if (isPositiveThis && isLongerOther || !isPositiveThis && isLongerThis) {
             return -1;
         } else {
-            return compareAbsWithSameLength(abs(this), abs(other)) *
+            return ((MyBigNumber) abs()).compareAbsWithSameLength(other.abs()) *
                     (isPositiveThis ? 1 : -1);
         }
     }
