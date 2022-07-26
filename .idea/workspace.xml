@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91f170cc-629f-4d4d-a0b4-a4e329908d79" name="Changes" comment="c9">
-      <change afterPath="$PROJECT_DIR$/src/main/java/annotation_reflection/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/annotation_reflection/MyAnnotation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/inter/bignumber/MyBigNumberTest.java" afterDir="false" />
+    <list default="true" id="91f170cc-629f-4d4d-a0b4-a4e329908d79" name="Changes" comment="c10">
+      <change afterPath="$PROJECT_DIR$/src/main/java/inter/calculator/Calculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/inter/calculator/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inter/calculator/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +61,7 @@
       <recent name="inter.bignumber" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.annotation_reflection.Main">
+  <component name="RunManager" selected="Application.inter.calculator.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="inter.bignumber.Main" />
       <module name="JavaAdvanced" />
@@ -77,12 +75,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegExp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="regexp.RegExp" />
+    <configuration name="annotation_reflection.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="annotation_reflection.Main" />
       <module name="JavaAdvanced" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="regexp.*" />
+          <option name="PATTERN" value="annotation_reflection.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -90,12 +88,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="annotation_reflection.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="annotation_reflection.Main" />
+    <configuration name="inter.calculator.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="inter.calculator.Main" />
       <module name="JavaAdvanced" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="annotation_reflection.*" />
+          <option name="PATTERN" value="inter.calculator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -136,18 +134,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="Application.RegExp" />
       <item itemvalue="Application.annotation_reflection.Main" />
+      <item itemvalue="Application.inter.calculator.Main" />
       <item itemvalue="JUnit.MyBigNumberTest" />
       <item itemvalue="JUnit.MyBigNumberTest.add" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.inter.calculator.Main" />
         <item itemvalue="Application.annotation_reflection.Main" />
         <item itemvalue="JUnit.MyBigNumberTest" />
         <item itemvalue="JUnit.MyBigNumberTest.add" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.RegExp" />
       </list>
     </recent_temporary>
   </component>
@@ -166,7 +164,7 @@
       <workItem from="1658250533258" duration="605000" />
       <workItem from="1658251586245" duration="821000" />
       <workItem from="1658252600203" duration="212000" />
-      <workItem from="1658253099900" duration="45095000" />
+      <workItem from="1658253099900" duration="52272000" />
     </task>
     <task id="LOCAL-00001" summary="c1">
       <created>1657630503308</created>
@@ -273,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658680191933</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="c10">
+      <created>1658852910600</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1658852910600</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,6 +305,7 @@
     <MESSAGE value="c7" />
     <MESSAGE value="c8" />
     <MESSAGE value="c9" />
-    <option name="LAST_COMMIT_MESSAGE" value="c9" />
+    <MESSAGE value="c10" />
+    <option name="LAST_COMMIT_MESSAGE" value="c10" />
   </component>
 </project>
