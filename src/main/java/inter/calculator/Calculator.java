@@ -4,6 +4,8 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Calculator {
 
@@ -56,7 +58,45 @@ public class Calculator {
     }
 
     private int calc(String string) {
-        System.out.println(string);
-        return 0;
+        Deque<String> stack = new ArrayDeque<>();
+        int position = 0;
+        Pattern digit = Pattern.compile("(\\d+)\\D");
+        Matcher matcher = digit.matcher(string);
+        while (position < string.length()) {
+            char c = string.charAt(position);
+            int next = 1;
+            if (Character.isDigit(c)) {
+                matcher.find(position);
+                String d = matcher.group(1);
+                stack.push(d);
+                next = d.length();
+            } else if (c == '~') {
+                int v = Integer.parseInt(stack.pop());
+                v *= -1;
+                stack.push(String.valueOf(v));
+            } else if (c == '+') {
+                int v1 = Integer.parseInt(stack.pop());
+                int v2 = Integer.parseInt(stack.pop());
+                int res = v2 + v1;
+                stack.push(String.valueOf(res));
+            } else if (c == '-') {
+                int v1 = Integer.parseInt(stack.pop());
+                int v2 = Integer.parseInt(stack.pop());
+                int res = v2 - v1;
+                stack.push(String.valueOf(res));
+            } else if (c == '*') {
+                int v1 = Integer.parseInt(stack.pop());
+                int v2 = Integer.parseInt(stack.pop());
+                int res = v2 * v1;
+                stack.push(String.valueOf(res));
+            } else if (c == '/') {
+                int v1 = Integer.parseInt(stack.pop());
+                int v2 = Integer.parseInt(stack.pop());
+                int res = v2 / v1;
+                stack.push(String.valueOf(res));
+            }
+            position += next;
+        }
+        return Integer.parseInt(stack.pop());
     }
 }
