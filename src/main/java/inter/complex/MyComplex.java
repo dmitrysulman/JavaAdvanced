@@ -14,17 +14,16 @@ public class MyComplex implements Complex {
 
     @Override
     public Complex sum(Complex other) {
-        return null;
+        return new MyComplex(real + other.getReal(), image + other.getImage());
     }
-
     @Override
     public Complex sub(Complex other) {
-        return null;
+        return new MyComplex(real - other.getReal(), image - other.getImage());
     }
 
     @Override
     public Complex mul(Complex other) {
-        return null;
+        return new MyComplex(real * other.getReal() - image * other.getImage(), image * other.getReal() + real * other.getImage());
     }
 
     @Override
@@ -39,7 +38,7 @@ public class MyComplex implements Complex {
 
     @Override
     public String toString() {
-        return String.format("%.2f+%.2fi", real, image);
+        return String.format("%.2f%+.2fi", real, image);
     }
 
     @Override
