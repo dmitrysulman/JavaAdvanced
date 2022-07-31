@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91f170cc-629f-4d4d-a0b4-a4e329908d79" name="Changes" comment="c11">
+    <list default="true" id="91f170cc-629f-4d4d-a0b4-a4e329908d79" name="Changes" comment="c12">
+      <change afterPath="$PROJECT_DIR$/src/main/java/inter/complex/Complex.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/inter/complex/Creator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/inter/complex/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/inter/complex/MyComplex.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/inter/complex/MyCreator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/inter/calculator/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inter/calculator/Calculator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,9 +20,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="JUnit4 Test Class" />
         <option value="AnnotationType" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -37,21 +41,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
-    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
+    "extract.method.default.visibility": "private",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "File.Encoding"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -166,6 +170,8 @@
       <workItem from="1658253099900" duration="54805000" />
       <workItem from="1659081841385" duration="429000" />
       <workItem from="1659087251299" duration="781000" />
+      <workItem from="1659088416293" duration="1117000" />
+      <workItem from="1659089602358" duration="2084000" />
     </task>
     <task id="LOCAL-00001" summary="c1">
       <created>1657630503308</created>
@@ -286,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658859002559</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="c12">
+      <created>1659088429601</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1659088429601</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,6 +328,7 @@
     <MESSAGE value="c9" />
     <MESSAGE value="c10" />
     <MESSAGE value="c11" />
-    <option name="LAST_COMMIT_MESSAGE" value="c11" />
+    <MESSAGE value="c12" />
+    <option name="LAST_COMMIT_MESSAGE" value="c12" />
   </component>
 </project>
