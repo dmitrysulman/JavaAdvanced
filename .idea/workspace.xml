@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91f170cc-629f-4d4d-a0b4-a4e329908d79" name="Changes" comment="c13" />
+    <list default="true" id="91f170cc-629f-4d4d-a0b4-a4e329908d79" name="Changes" comment="c13">
+      <change afterPath="$PROJECT_DIR$/src/main/java/inter/schedule/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/inter/schedule/WorkingDayTime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/inter/schedule/WorkingDayTimeImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +62,21 @@
       <recent name="inter.bignumber" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Test1">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="inter.schedule.Main" />
+      <module name="JavaAdvanced" />
+      <option name="VM_PARAMETERS" value="-Dfile.encoding=windows-1251" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="inter.schedule.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Test1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="inter.Test1" />
       <module name="JavaAdvanced" />
@@ -110,35 +129,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyBigNumberTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JavaAdvanced" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="inter.bignumber.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="inter.bignumber" />
-      <option name="MAIN_CLASS_NAME" value="inter.bignumber.MyBigNumberTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
+      <item itemvalue="Application.Main" />
       <item itemvalue="Application.Test1" />
       <item itemvalue="Application.inter.complex.Main" />
       <item itemvalue="Application.annotation_reflection.Main" />
       <item itemvalue="Application.inter.calculator.Main" />
-      <item itemvalue="JUnit.MyBigNumberTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Test1" />
         <item itemvalue="Application.inter.complex.Main" />
         <item itemvalue="Application.inter.calculator.Main" />
         <item itemvalue="Application.annotation_reflection.Main" />
-        <item itemvalue="JUnit.MyBigNumberTest" />
       </list>
     </recent_temporary>
   </component>
@@ -164,7 +168,9 @@
       <workItem from="1659089602358" duration="6225000" />
       <workItem from="1659264592489" duration="5020000" />
       <workItem from="1659422015077" duration="1809000" />
-      <workItem from="1659442191015" duration="332000" />
+      <workItem from="1659442191015" duration="371000" />
+      <workItem from="1659537801583" duration="611000" />
+      <workItem from="1660057411555" duration="5195000" />
     </task>
     <task id="LOCAL-00001" summary="c1">
       <created>1657630503308</created>
@@ -327,7 +333,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659442504653</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="c13">
+      <created>1659442555009</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1659442555009</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
