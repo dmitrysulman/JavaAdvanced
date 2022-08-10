@@ -19,23 +19,23 @@ public class Solution {
     }
 
     String getOperationTime(Map<DayOfWeek, WorkingDayTime> dayTimeMap) {
+        Map<DayOfWeek, String> sortedDayTimeMap = new TreeMap<>();
         for (DayOfWeek dayOfWeek : DayOfWeek.values()) {
-            if (!dayTimeMap.containsKey(dayOfWeek)) {
-                dayTimeMap.put(dayOfWeek, null);
+            String workingDayTimeString;
+            if (dayTimeMap.containsKey(dayOfWeek)) {
+                WorkingDayTime workingDayTime = dayTimeMap.get(dayOfWeek);
+                workingDayTimeString = workingDayTime.getStart().toString() +
+                        "-" + workingDayTime.getEnd().toString();
+            } else {
+                workingDayTimeString = "выходной";
             }
+            sortedDayTimeMap.put(dayOfWeek, workingDayTimeString);
         }
-        Map<DayOfWeek, WorkingDayTime> sortedDayTimeMap = new TreeMap<>(dayTimeMap);
         List<List<DayOfWeek>> dayOfWeeks = new ArrayList<>();
         List<String> workingDayTimes = new ArrayList<>();
-        for (Map.Entry<DayOfWeek, WorkingDayTime> entry : sortedDayTimeMap.entrySet()) {
+        for (Map.Entry<DayOfWeek, String> entry : sortedDayTimeMap.entrySet()) {
             DayOfWeek currentDayOfWeek = entry.getKey();
-            String currentWorkingDayTime;
-            if (entry.getValue() == null) {
-                currentWorkingDayTime = "выходной";
-            } else {
-                currentWorkingDayTime = entry.getValue().getStart().toString() +
-                        "-" + entry.getValue().getEnd().toString();
-            }
+            String currentWorkingDayTime = entry.getValue();
             if (!dayOfWeeks.isEmpty() &&
                     currentWorkingDayTime.equals(workingDayTimes.get(workingDayTimes.size() - 1))) {
                 dayOfWeeks.get(workingDayTimes.size() - 1).add(currentDayOfWeek);
