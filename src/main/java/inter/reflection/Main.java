@@ -1,9 +1,12 @@
 package inter.reflection;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
@@ -30,5 +33,26 @@ public class Main {
                 }
             }
         });
+    }
+
+    Map<String, Operation> createPoolOperation(List<Object> objects) throws Exception {
+        Map<String, Operation> poolOperation = new HashMap<>();
+        objects.forEach(object -> {
+            Method[] methods = object.getClass().getDeclaredMethods();
+            poolOperation.putAll(Arrays.stream(methods)
+                    .filter(method -> method.isAnnotationPresent(BotRequestMapping.class))
+                    .collect(Collectors.toMap(method -> method.getAnnotation(BotRequestMapping.class).value(),
+                                    method -> () -> method.invoke(object)
+                            )
+                    )
+            );
+//                    .forEach(method ->
+//                            poolOperation.put(method.getAnnotation(BotRequestMapping.class).value(),
+//                                    () -> method.invoke(object)
+//                            )
+//                    );
+        });
+
+        return poolOperation;
     }
 }
