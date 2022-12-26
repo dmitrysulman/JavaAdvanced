@@ -19,6 +19,10 @@ public class Main {
         stringArray = (String[]) objects;
         stringArray[0] = "str";
 
+        List<?> list = new ArrayList<CharSequence>(List.of("question"));
+        System.out.println(list.get(0));
+//        list.add(new Object()); //won't compile
+
         List<? super CharSequence> list1 = new ArrayList<Object>();
         list1.add("aString");
         Object s1 = list1.get(0);
@@ -32,10 +36,10 @@ public class Main {
         List<String> strings = new ArrayList<>();
         strings.add("x");
 
-        List<Integer> list = (List) strings;
+        List<Integer> list3 = (List) strings;
         System.out.println(list.get(0));
-        list.add(1);
-        System.out.println(list.get(1) + 1);
+        list3.add(1);
+        System.out.println(list3.get(1) + 1);
 
         Object o = strings;
 // Warning, but will succeeed at execution time
