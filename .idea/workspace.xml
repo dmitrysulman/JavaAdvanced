@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91f170cc-629f-4d4d-a0b4-a4e329908d79" name="Changes" comment="generics">
-      <change beforePath="$PROJECT_DIR$/src/main/java/other/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/other/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/other/MyGenericClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/other/MyGenericClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +177,7 @@
       <workItem from="1665250391167" duration="8905000" />
       <workItem from="1667396484043" duration="827000" />
       <workItem from="1671039205796" duration="2447000" />
-      <workItem from="1672079839789" duration="8394000" />
+      <workItem from="1672079839789" duration="8760000" />
     </task>
     <task id="LOCAL-00001" summary="c1">
       <created>1657630503308</created>
@@ -389,7 +389,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672089445836</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="generics">
+      <created>1672089833446</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1672089833447</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

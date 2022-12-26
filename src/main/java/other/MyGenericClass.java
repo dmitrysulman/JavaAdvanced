@@ -1,6 +1,8 @@
 package other;
 
-public class MyGenericClass<T extends CharSequence> {
+import java.io.Serializable;
+
+public class MyGenericClass<T extends String&Serializable&CharSequence&Comparable<String>> {
     private Object obj;
     private T tObj;
 
