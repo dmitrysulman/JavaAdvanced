@@ -32,8 +32,10 @@ public class Main {
         CharSequence s2 = list2.get(0);
         System.out.println(s2);
 
-        List<String> strings = new ArrayList<>();
+        List<String> strings = new ArrayList();
         strings.add("x");
+        String fromList = strings.get(0);
+        System.out.println(fromList);
 
         List<Integer> list3 = (List) strings;
         System.out.println(list3.get(0));
