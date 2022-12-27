@@ -1,6 +1,5 @@
 package other;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,9 +36,12 @@ public class Main {
         strings.add("x");
 
         List<Integer> list3 = (List) strings;
-        System.out.println(list.get(0));
+        System.out.println(list3.get(0));
         list3.add(1);
         System.out.println(list3.get(1) + 1);
+
+        List<CharSequence> charSequences = (List) strings;
+        System.out.println(charSequences.get(0));
 
         Object o = strings;
 // Warning, but will succeeed at execution time
