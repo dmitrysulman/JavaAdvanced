@@ -21,7 +21,7 @@ public class FindOverlapChars {
         overlap.forEach(System.out::print);
     }
 
-    private static Set<Character> findOverlap(List<? extends String> strings) {
+    private static Set<Character> findOverlap(List<String> strings) {
         Set<Character> result = getSetOfCharsFromString(strings.get(0));
         for (int i = 1; i < strings.size(); i++) {
             result.retainAll(getSetOfCharsFromString(strings.get(i)));
