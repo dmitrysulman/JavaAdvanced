@@ -5,6 +5,13 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+
+        String str = "str";
+
+        Object obj = str;
+
+        System.out.println(obj instanceof CharSequence);
+
         String test = "test";
         MyGenericClass<String> myGenericClass = new MyGenericClass<>(test, test);
 

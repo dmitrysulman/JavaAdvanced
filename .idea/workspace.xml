@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="91f170cc-629f-4d4d-a0b4-a4e329908d79" name="Changes" comment="overlap">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/other/FindOverlapChars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/other/FindOverlapChars.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/other/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/other/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +65,7 @@
       <recent name="inter.bignumber" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.FindOverlapChars">
+  <component name="RunManager" selected="Application.other.Main">
     <configuration name="FindOverlapChars" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="other.FindOverlapChars" />
       <module name="JavaAdvanced" />
@@ -142,8 +142,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.FindOverlapChars" />
         <item itemvalue="Application.other.Main" />
+        <item itemvalue="Application.FindOverlapChars" />
         <item itemvalue="Application.RegExp" />
         <item itemvalue="Application.Solution" />
         <item itemvalue="Application.Main" />
@@ -178,7 +178,7 @@
       <workItem from="1665250391167" duration="8905000" />
       <workItem from="1667396484043" duration="827000" />
       <workItem from="1671039205796" duration="2447000" />
-      <workItem from="1672079839789" duration="16412000" />
+      <workItem from="1672079839789" duration="23649000" />
     </task>
     <task id="LOCAL-00001" summary="c1">
       <created>1657630503308</created>
@@ -439,7 +439,21 @@
       <option name="project" value="LOCAL" />
       <updated>1672144588286</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="overlap">
+      <created>1672148589334</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1672148589334</updated>
+    </task>
+    <task id="LOCAL-00039" summary="overlap">
+      <created>1672149050565</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1672149050565</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
