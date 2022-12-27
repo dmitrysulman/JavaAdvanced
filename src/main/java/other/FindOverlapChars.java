@@ -15,6 +15,7 @@ public class FindOverlapChars {
             strings[i] = scanner.nextLine();
         }
         Set<Character> overlap = findOverlap(strings);
+        System.out.print("Answer: ");
         overlap.forEach(System.out::print);
     }
 
